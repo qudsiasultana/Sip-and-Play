@@ -1,0 +1,206 @@
+body {
+  font-family: 'Lora', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #006400; /* Dark Green */
+  font-size: 1em;
+}
+
+header {
+  background-color: #89c9b8; /* Light Green */
+  padding: 1em 0;
+  text-align: center;
+}
+
+header .logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #006400; /* Dark Green */
+  font-size: 1.2em;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+main {
+  padding: 2em;
+  background-color: #fff;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+h2, h3 {
+  color: #006400; /* Dark Green */
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2em;
+  font-weight: normal;
+}
+
+h3 {
+  border-bottom: 2px solid #006400;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.moving-image {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 200px; /* Adjust as needed */
+  margin-bottom: 1em; /* Add some space between the image and the menu */
+}
+
+.moving-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: slide 10s linear infinite;
+  animation: slide 10s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.menu-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu-nav ul li {
+  margin: 0.5em 1em;
+  position: relative;
+}
+
+.menu-nav ul li a {
+  text-decoration: none;
+  color: #006400;
+  font-size: 1.2em;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 0.5em;
+}
+
+.menu-nav ul li:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  right: -1em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+}
+
+.menu-nav ul li a:hover {
+  color: #89c9b8; /* Light Green */
+}
+
+.menu-section {
+  display: none; /* Hide sections by default */
+}
+
+.menu-section.active {
+  display: block; /* Show active section */
+}
+
+.menu-section p {
+  margin: 0.5em 0;
+  font-size: 1.1em;
+}
+
+form label {
+  display: block;
+  margin-top: 1em;
+  color: #006400; /* Dark Green */
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  background-color: #f0f0f0; /* Light Grey */
+  color: #006400; /* Dark Green */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Lora', serif;
+}
+
+form button {
+  display: block;
+  margin-top: 1em;
+  padding: 0.7em;
+  background-color: #89c9b8; /* Light Green */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Lora', serif;
+}
+
+#menu-3d {
+  width: 100%;
+  height: 500px;
+  background-color: #f0f0f0; /* Light Grey */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: #89c9b8; /* Light Green */
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .menu-nav ul {
+    flex-direction: column;
+  }
+
+  .menu-nav ul li {
+    margin: 10px 0;
+  }
+
+  form input, form textarea {
+    width: 100%;
+  }
+}
