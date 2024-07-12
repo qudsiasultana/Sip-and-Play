@@ -11,6 +11,7 @@ header {
   background-color: #d9e4df; /* Light Green */
   padding: 1em 0;
   text-align: center;
+  border-bottom: 1px solid #ddd;
 }
 
 header .logo {
@@ -60,6 +61,81 @@ header .navbar ul li a.active {
   font-weight: bold;
 }
 
+header .navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+header .navbar-left .logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+header .navbar-left .brand-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+  color: #333; /* Dark Grey */
+}
+
+header .navbar-center {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+}
+
+header .navbar-center li {
+  margin: 0 15px;
+}
+
+header .navbar-center li a {
+  text-decoration: none;
+  color: #333; /* Dark Grey */
+  font-size: 1em;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+header .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+header .navbar-right .social-icon {
+  width: 25px;
+  margin-left: 10px;
+}
+
+.hero-section {
+  background-image: url('assets/images/background.jpg'); /* Update with your background image path */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2em;
+  text-align: center;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.hero-overlay h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.5em;
+  color: #333; /* Dark Grey */
+}
+
+.hero-overlay p {
+  font-size: 1em;
+  color: #333; /* Dark Grey */
+  margin: 1em 0;
+}
+
 .welcome-section {
   padding: 4em 2em;
   text-align: center;
@@ -82,6 +158,7 @@ header .navbar ul li a.active {
   text-align: center;
 }
 
+
 .about-section h2, .gallery-section h2, .reservation-section h2 {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2.5em;
@@ -100,6 +177,25 @@ header .navbar ul li a.active {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1em;
+}
+.gallery-section,
+.reservation-section {
+  padding: 2em;
+  text-align: center;
+}
+
+.gallery-section .gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.gallery-section .gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .gallery img {
@@ -199,7 +295,42 @@ header .navbar ul li a.active {
   display: block;
 }
 
+@media (max-width: 768px) {
+  header .navbar {
+    flex-direction: column;
+  }
 
+  header .navbar-center {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  header .navbar-center li {
+    margin: 10px 0;
+  }
+
+  header .navbar-right {
+    margin-top: 10px;
+  }
+  .hero-overlay {
+    padding: 1em;
+    max-width: 90%;
+  }
+  .hero-overlay h2 {
+    font-size: 2em;
+  }
+}
+.welcome-section {
+  text-align: center;
+  padding: 2em;
+}
+
+.welcome-section .welcome-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+}
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
@@ -227,6 +358,13 @@ header .navbar ul li a.active {
 @media (max-width: 480px) {
   .menu-item {
     width: calc(100% - 2em);
+  }
+  .hero-overlay h2 {
+    font-size: 1.5em;
+  }
+
+  .gallery-section .gallery img {
+    width: 100px;
   }
 }
 .events-section {
@@ -294,6 +432,10 @@ header .navbar ul li a.active {
   min-width: 300px;
   max-width: 500px;
 }
+.contact-form, .contact-info {
+  flex: 1;
+  margin: 0 1em;
+}
 
 .contact-form label {
   display: block;
@@ -303,10 +445,10 @@ header .navbar ul li a.active {
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea, .contact-form button {
   width: 100%;
   padding: 0.5em;
-  margin-bottom: 1em;
+  margin-top: 0.5em;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-family: 'Lora', serif;
@@ -315,16 +457,19 @@ header .navbar ul li a.active {
 .contact-form button {
   background-color: #89c9b8; /* Light Green */
   color: #fff;
-  padding: 0.7em 1.2em;
   border: none;
   border-radius: 5px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.2em;
   cursor: pointer;
+  margin-top: 1em;
 }
 
 .contact-form button:hover {
   background-color: #76b09d;
+}
+.contact-info p {
+  margin: 1em 0;
 }
 
 .contact-info {
@@ -383,7 +528,7 @@ header .navbar ul li a.active {
 }
 
 footer {
-  background-color: #89c9b8; /* Light Green */
+  background-color: black; /* Light Green */
   color: #fff;
   text-align: center;
   padding: 1em 0;
