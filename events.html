@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sip & Play - Upcoming Events">
+  <meta name="description" content="Sip & Play - Events">
   <title>Sip & Play - Events</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
       <ul class="navbar-center">
         <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
-        <li><a href="events.html">Events</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="games.html">Game Collection</a></li>
       </ul>
@@ -35,20 +35,44 @@
     </nav>
   </header>
   <main>
+    <section class="discord-banner">
+      <img src="assets/images/magic_gathering.jpg" alt="Magic the Gathering">
+      <div class="banner-text">
+        <h2>Magic the Gathering!</h2>
+        <p>Want to join the Sip & Play community? All of the action is on Discord and click here to join:</p>
+        <a href="https://discord.com/channels/690670603337728020/690670606475198559" class="discord-button" target="_blank">Discord Server</a>
+      </div>
     <section class="events-section">
-      <h2>Events</h2>
-      <h3>Upcoming Events</h3>
-      <ul>
-        <li>Event 1 - Date</li>
-        <li>Event 2 - Date</li>
-        <li>Event 3 - Date</li>
-      </ul>
+      <h2>Upcoming Events</h2>
       <div id="calendar"></div>
+      <div class="event-list">
+        <div class="event-item">
+          <img src="assets/images/event1.jpg" alt="Event 1">
+          <h4>Blitz Tournament</h4>
+          <p>July 1st 7PM</p>
+          <p>At Sip & Play</p>
+          <p>$10 entry</p>
+          <p>All entries turn into prizes</p>
+        </div>
+        <div class="event-item">
+          <img src="assets/images/event2.jpg" alt="Event 2">
+          <h4>Family Fridays</h4>
+          <p>Every Friday 4PM - Closing</p>
+          <p>Kids get half off game time!</p>
+        </div>
+        <div class="event-item">
+          <img src="assets/images/event3.jpg" alt="Event 3">
+          <h4>Park Slope Chess Club</h4>
+          <p>Every Monday 6PM</p>
+          <p>All skill levels welcome</p>
+        </div>
+      </div>
     </section>
   </main>
   <footer>
     <p>&copy; 2024 Sip & Play</p>
   </footer>
   <script src="calendar.js"></script>
+  <script src="events.js"></script>
 </body>
 </html>

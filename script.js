@@ -161,3 +161,13 @@ document.addEventListener('DOMContentLoaded', function() {
     gamesContainer.appendChild(gameButton);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const contactForm = document.querySelector(".contact-form");
+  
+  contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Thank you for your message! We'll get back to you soon.");
+    contactForm.reset();
+  });
+});
