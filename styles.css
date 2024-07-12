@@ -213,6 +213,15 @@ header .navbar ul li a.active {
   .menu-item {
     width: calc(50% - 2em);
   }
+
+}
+
+
+@media (max-width: 480px) {
+  .menu-item {
+    width: calc(100% - 2em);
+  }
+
 }
 
 @media (max-width: 480px) {
