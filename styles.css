@@ -447,11 +447,100 @@ header .navbar-right .social-icon {
   margin: 0.5em 0;
 }
 
-#calendar {
+/*#calendar {
   width: 100%;
   margin-bottom: 20px;
+}*/
+/* Styling for the calendar container */
+.calendar {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Styling for the header */
+.calendar header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Styling for the current date */
+.calendar .current-date {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Styling for the navigation icons */
+.calendar .icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.calendar .icons span {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Styling for the week days */
+.calendar .weeks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.calendar .weeks li {
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Styling for the days */
+.calendar .days {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.calendar .days li {
+  flex: 1 0 14.28%;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.calendar .days li:hover {
+  background-color: #f0f0f0;
+}
+
+.calendar .days li.active {
+  background-color: #4285f4;
+  color: #fff;
+}
+
+/* Additional styling for today */
+.calendar .days li.today {
+  border: 2px solid #4285f4;
+}
+
+/* Styling for previous and next month's days */
+.calendar .days li.prev-date,
+.calendar .days li.next-date {
+  color: #ccc;
+}
 .contact-section {
   padding: 2em 0;
   text-align: center;
@@ -615,4 +704,12 @@ footer {
 
 .contact-form, .contact-info {
   max-width: 100%;
+}
+
+#container3D canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
