@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sip & Play - Upcoming Events">
-  <title>Sip & Play - Events</title>
+  <meta name="description" content="Sip & Play - Board Games Collection">
+  <title>Sip & Play - Games Collection</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,27 +17,23 @@
       <ul>
         <li><a href="index.html">home</a></li>
         <li><a href="menu.html">menu</a></li>
-        <li><a href="events.html" class="active">events</a></li>
+        <li><a href="events.html">events</a></li>
         <li><a href="contact.html">contact</a></li>
-        <li><a href="games.html">game collection</a></li>
+        <li><a href="games.html" class="active">game collection</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section class="events-section">
-      <h2>Events</h2>
-      <h3>Upcoming Events</h3>
-      <ul>
-        <li>Event 1 - Date</li>
-        <li>Event 2 - Date</li>
-        <li>Event 3 - Date</li>
-      </ul>
-      <div id="calendar"></div>
+    <section class="games-section">
+      <h2>Our Board Game Collection</h2>
+      <div class="games-container" id="games-container">
+        <!-- Game buttons will be dynamically inserted here -->
+      </div>
     </section>
   </main>
   <footer>
     <p>&copy; 2024 Sip & Play</p>
   </footer>
-  <script src="calendar.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
